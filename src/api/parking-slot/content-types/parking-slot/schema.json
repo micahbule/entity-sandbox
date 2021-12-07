@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parking_slots",
+  "info": {
+    "singularName": "parking-slot",
+    "pluralName": "parking-slots",
+    "displayName": "Parking Slot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "parking_space": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parking-space.parking-space"
+    },
+    "slot_tag": {
+      "type": "string"
+    },
+    "available": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

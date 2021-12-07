@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parking_records",
+  "info": {
+    "singularName": "parking-record",
+    "pluralName": "parking-records",
+    "displayName": "Parking Record"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "parking_slot": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parking-slot.parking-slot"
+    },
+    "time_parked": {
+      "type": "datetime"
+    },
+    "time_vacated": {
+      "type": "datetime"
+    },
+    "plate_number": {
+      "type": "string"
+    },
+    "parking_payment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parking-payment.parking-payment",
+      "inversedBy": "parking_record"
+    }
+  }
+}

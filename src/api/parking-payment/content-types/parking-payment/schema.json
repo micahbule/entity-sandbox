@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parking_payments",
+  "info": {
+    "singularName": "parking-payment",
+    "pluralName": "parking-payments",
+    "displayName": "Parking Payment"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "parking_record": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parking-record.parking-record",
+      "inversedBy": "parking_payment"
+    },
+    "amount": {
+      "type": "float"
+    },
+    "date_paid": {
+      "type": "datetime"
+    }
+  }
+}

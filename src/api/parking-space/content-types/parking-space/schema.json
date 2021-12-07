@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parking_spaces",
+  "info": {
+    "singularName": "parking-space",
+    "pluralName": "parking-spaces",
+    "displayName": "Parking Space",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slots": {
+      "type": "integer"
+    }
+  }
+}
